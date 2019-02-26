@@ -1,0 +1,33 @@
+.logo {
+    width: auto;
+    height: 50px;
+}
+
+.bachelart {
+    width: auto;
+    height: 20px;
+    margin-left: 1vw;
+}
+
+.navbar-nav {
+    margin-top: 2vh;
+    width: 100%;
+    justify-content: space-around !important;
+
+}
+
+.Follow {
+
+    display: flex;
+}
+
+.Login {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.navbar {
+    z-index: 5;
+    width: 100%;
+    position: fixed !important;
+}

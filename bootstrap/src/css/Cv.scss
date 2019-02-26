@@ -1,0 +1,46 @@
+.mains {
+    background-image: url(../img/forest2.jpg);
+    background-size: cover;
+    height: auto;
+    max-width: 100%;
+    display: flex; // Fix IE 11 issue.
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+
+    .character {
+        margin-top: 10vh;
+        width: 150px !important;
+        height: 150px !important;
+        border-radius: 300px;
+    }
+
+    .title {
+        font-size: 2em;
+        margin-top: 5vh;
+    }
+
+    .subtitle {
+        color: #eee;
+        font-size: 1.5em;
+    }
+
+
+
+}
+
+.resume {
+    background-color: rgba(17, 17, 17, 1);
+
+    .summary {
+        color: #eee;
+        font-size: 1em;
+    }
+
+    .card {
+        background-color: rgb(17, 17, 17);
+        padding: 5vh 0;
+        border: none;
+    }
+}

@@ -1,0 +1,31 @@
+/* .nav-tabs {
+    display: none !important;
+}
+
+.nav {
+    display: none !important;
+} */
+
+.main {
+    //background-color: rgb(17, 17, 17);
+    background-color: #121c20;
+    //background-image: linear-gradient(-90deg, #121c20, #273e47, #121c20);
+    // background-image: linear-gradient(#121c20);//#273e47
+
+    .title {
+        padding: 5vh 0;
+        text-align: center;
+        color: #eee
+    }
+
+    .CardBody {
+        padding: 0;
+        border: none;
+    }
+
+    .card {
+        background-color: transparent;
+        margin: 5vh 0;
+        border: none;
+    }
+}

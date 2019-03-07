@@ -31,7 +31,7 @@ exports.auth = function(req, res) {
 						res.json({
 							message: {
 								success: true,
-								token: `Bearer ${token}`
+								token: `${token}`
 							}
 						});
 					}

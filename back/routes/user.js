@@ -12,9 +12,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/me', passport.authenticate('jwt', { session: false }), (req, res) => {
-	return res.json({
-		id: req.user.id
-	});
+	res.send(req.user);
 });
 
 router.post('/signin', User.auth);

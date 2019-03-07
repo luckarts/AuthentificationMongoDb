@@ -37,6 +37,11 @@ app.use(passport.initialize());
 require('./strategy')(passport);
 // Index Route
 
+app.get('/me', passport.authenticate('jwt', { session: false }), (req, res) => {
+	return res.json({
+		id: req.user
+	});
+});
 app.use('/api/user', User);
 
 //requete Get !

@@ -1,0 +1,5 @@
+cordova
+back/routes/storage
+.vscode
+back/node_modules
+bootstrap/node_modules

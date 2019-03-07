@@ -1,7 +1,7 @@
 // Login.js
 
 import React, { Component } from 'react';
-
+import axios from 'axios';
 import classnames from 'classnames';
 
 class Login extends Component {
@@ -28,18 +28,25 @@ class Login extends Component {
 		};
 		this.props.loginUser(user);
 	}
+/* 		.then(res => {	const { token } = res.data
+			localStorage.setItem('jwtToken', token)})
+ */
 	onSubmit = event => {
-		event.preventDefault();
+			const headers = {
+		'Content-Type': 'application/json',
+	  };
+	  event.preventDefault();
 
 		fetch('api/user/signin', {
 			method: 'POST',
-			headers: new Headers({ 'Content-Type': 'application/json' }),
+			 headers,
 			body: JSON.stringify(this.state)
 		})
-			.then(res => res.json())
-			.then(res => this.setState({ errors: res.message }), err => this.setState({ errors: err.message }))
-			.then(this.Redirect());
-	};
+		.then(res => res.json())
+			.then(res => {localStorage.setItem('token', res.message.token)
+				 this.setState({ errors: res.message }), err => this.setState({ errors: err.message })})
+			.then(this.Redirect())
+	}
 	Redirect() {
 		this.state.errors.success === undefined
 			? this.setState({ errors: { message: 'errors !!' } })
